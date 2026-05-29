@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Sada Sozluk</title>
-    <meta name="description" content="Support and help page for the Sada Sozluk app.">
+    <title>Sada Sozluk - Features & Marketing</title>
+    <meta name="description" content="Discover the features of Sada Sozluk, the offline Turkmen explanatory dictionary app.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -116,60 +116,68 @@
         h1 {
             font-size: 2.25rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.5rem;
             letter-spacing: -0.02em;
         }
 
-        p {
-            margin-bottom: 1.5rem;
+        .subtitle {
+            font-size: 1.125rem;
             color: var(--text-secondary);
+            margin-bottom: 2.5rem;
         }
 
         hr {
             border: 0;
             height: 1px;
             background-color: var(--divider-color);
-            margin: 2.5rem 0;
+            margin: 2rem 0;
         }
 
-        h2 {
-            font-size: 1.5rem;
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .feature-card {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+
+        .feature-title {
             font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-        }
-
-        .faq-item {
-            margin-bottom: 1.75rem;
-        }
-
-        .faq-question {
-            font-weight: 600;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             margin-bottom: 0.5rem;
             color: var(--text-primary);
         }
 
-        .faq-answer {
+        .feature-desc {
+            font-size: 0.95rem;
             color: var(--text-secondary);
         }
 
-        .contact-box {
-            background-color: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .contact-box a {
-            color: var(--accent-color);
-            text-decoration: none;
+        .app-store-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            background-color: var(--text-primary);
+            color: var(--bg-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
             font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.2s;
         }
 
-        .contact-box a:hover {
-            text-decoration: underline;
+        .app-store-btn:hover {
+            opacity: 0.9;
         }
 
         footer {
@@ -187,8 +195,8 @@
             <a href="index.html" class="brand">Sada Sozluk</a>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="marketing.html">Marketing</a>
-                <a href="support.html" class="active">Support</a>
+                <a href="marketing.html" class="active">Marketing</a>
+                <a href="support.html">Support</a>
                 <a href="privacy.html">Privacy Policy</a>
             </nav>
         </div>
@@ -196,41 +204,34 @@
 
     <main>
         <div class="container">
-            <h1>Support & Help</h1>
-            <p>Welcome to the support page for Sada Sozluk. If you have questions, feedback, or need help with the application, you can find common answers below or get in touch with us directly.</p>
+            <h1>Sada Sozluk</h1>
+            <p class="subtitle">Your Comprehensive Offline Turkmen Dictionary</p>
+
+            <p>Sada Sozluk is designed to provide quick, reliable, and accessible word definitions anytime, anywhere. Built with a focus on speed and user experience, it serves as the perfect companion for students, professionals, and language enthusiasts.</p>
 
             <hr>
 
-            <h2>Frequently Asked Questions</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">Does the application require an internet connection?</div>
-                <div class="faq-answer">No. Sada Sozluk stores the dictionary database locally on your device. You can search for word definitions and access all features without an active network connection.</div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-title">100% Offline Access</div>
+                    <div class="feature-desc">The entire dictionary database is stored locally on your device. Search for words instantly without needing a Wi-Fi or cellular connection.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Vocabulary Building</div>
+                    <div class="feature-desc">Enhance your learning with built-in flashcards, review lists, and interactive quizzes designed to help you master new words.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Favorites & History</div>
+                    <div class="feature-desc">Easily bookmark words you want to remember and quickly access your recent search history for seamless studying.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Modern & Fast</div>
+                    <div class="feature-desc">Enjoy a clean, intuitive interface that automatically adapts to your device's dark or light mode for comfortable reading.</div>
+                </div>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question">How can I clear my search history?</div>
-                <div class="faq-answer">On the home screen, find the recent searches section. Tap the clear option located next to the section header to remove all items from your search history.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How do I add words to my favorites?</div>
-                <div class="faq-answer">While viewing the detailed definition page of any word, tap the star icon at the top right of the screen. This saves the word to your favorites list for quick offline retrieval.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What should I do if I find an incorrect definition or face a bug?</div>
-                <div class="faq-answer">Please contact us via the support email address below. We verify database corrections and application issues regularly and include fixes in upcoming updates.</div>
-            </div>
-
-            <hr>
-
-            <h2>Contact Support</h2>
-            <p>We value your experience and respond to all inquiries individually. Please write to us at our dedicated email address:</p>
-            
-            <div class="contact-box">
-                Email: <a href="mailto:jelaletdinov@gmail.com">jelaletdinov@gmail.com</a><br>
-                Response Time: We aim to reply to all support requests within 24 to 48 hours.
+            <div style="text-align: center;">
+                <a href="#" class="app-store-btn">Download on the App Store</a>
             </div>
         </div>
     </main>
