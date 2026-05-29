@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="tk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sada Sözlük - Goldaw we Habarlaşmak (Support & Contact)</title>
-    <meta name="description" content="Sada Sözlük programy üçin goldaw we habarlaşmak sahypasy. Support page for the Sada Sözlük app.">
+    <title>Support - Sada Sozluk</title>
+    <meta name="description" content="Support and help page for the Sada Sozluk app.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
+            --bg-color: #0b0f19;
+            --card-bg: #151d30;
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --accent-color: #3b82f6;
             --accent-hover: #2563eb;
-            --border-color: #334155;
-            --divider-color: #334155;
+            --border-color: #243049;
+            --nav-bg: #111827;
+            --divider-color: #243049;
         }
 
         @media (prefers-color-scheme: light) {
@@ -29,6 +30,7 @@
                 --accent-color: #2563eb;
                 --accent-hover: #1d4ed8;
                 --border-color: #e2e8f0;
+                --nav-bg: #f1f5f9;
                 --divider-color: #e2e8f0;
             }
         }
@@ -44,38 +46,74 @@
             background-color: var(--bg-color);
             color: var(--text-primary);
             min-height: 100vh;
-            padding: 3rem 1.5rem;
+            display: flex;
+            flex-direction: column;
             line-height: 1.6;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 3rem;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        header {
+            width: 100%;
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
-        .back-link {
-            display: inline-flex;
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            color: var(--accent-color);
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.025em;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
-            margin-bottom: 2rem;
-            transition: transform 0.2s ease;
+            transition: color 0.2s ease;
         }
 
-        .back-link:hover {
-            transform: translateX(-4px);
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 1.5rem;
+        }
+
+        .container {
+            max-width: 720px;
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3.5rem 2.5rem;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
-            font-family: 'Playfair Display', serif;
             font-size: 2.25rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
@@ -98,9 +136,7 @@
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            color: var(--text-primary);
         }
 
         .faq-item {
@@ -123,7 +159,7 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1.5rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .contact-box a {
@@ -136,88 +172,70 @@
             text-decoration: underline;
         }
 
-        .footer {
-            margin-top: 3rem;
+        footer {
+            text-align: center;
+            padding: 2rem;
             font-size: 0.875rem;
             color: var(--text-secondary);
-            text-align: center;
+            border-top: 1px solid var(--border-color);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">← Baş sahypa / Home</a>
-        
-        <h1>Sada Sözlük — Support & Feedback / Goldaw we Habarlaşmak</h1>
-        <p>Welcome to the official support page for <strong>Sada Sözlük</strong>, the offline Turkmen explanatory dictionary application. Dürli soraglaryňyz we teklipleriňiz bar bolsa, aşakdaky maglumatlar arkaly biz bilen habarlaşyp bilersiňiz.</p>
-
-        <hr>
-
-        <h2>🇹🇲 Türkmençe Goldaw</h2>
-        <p><strong>Sada Sözlük</strong> — Türkmen diliniň düşündirişli sözlügi bolup, sözleriň manysyny çalt we aňsat tapmaga kömek edýär. Programma doly offline işleýär we internet baglanyşygyny talap etmeýär.</p>
-
-        <div class="faq-item">
-            <div class="faq-question">1. Programma ulanmak üçin internet gerekmi?</div>
-            <div class="faq-answer">Ýok, Sada Sözlük doly offline rejimde işleýär. Programmadaky ähli sözler we düşündirişler enjamyňyzyň özünde saklanýar, şonuň üçin internet baglanyşygy bolmasa-da gözleg edip bilersiňiz.</div>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand">Sada Sozluk</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="support.html" class="active">Support</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="faq-item">
-            <div class="faq-question">2. Soňky gözlegleri (taryhy) nädip arassalamaly?</div>
-            <div class="faq-answer">Esasy sahypada <strong>"SOŇKY GÖZLEGLER"</strong> bölüminiň sag tarapynda ýerleşýän <strong>"Arassala"</strong> düwmesine basyp, gözleg taryhyňyzy doly pozup bilersiňiz.</div>
+    <main>
+        <div class="container">
+            <h1>Support & Help</h1>
+            <p>Welcome to the support page for Sada Sozluk. If you have questions, feedback, or need help with the application, you can find common answers below or get in touch with us directly.</p>
+
+            <hr>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Does the application require an internet connection?</div>
+                <div class="faq-answer">No. Sada Sozluk stores the dictionary database locally on your device. You can search for word definitions and access all features without an active network connection.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How can I clear my search history?</div>
+                <div class="faq-answer">On the home screen, find the recent searches section. Tap the clear option located next to the section header to remove all items from your search history.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I add words to my favorites?</div>
+                <div class="faq-answer">While viewing the detailed definition page of any word, tap the star icon at the top right of the screen. This saves the word to your favorites list for quick offline retrieval.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What should I do if I find an incorrect definition or face a bug?</div>
+                <div class="faq-answer">Please contact us via the support email address below. We verify database corrections and application issues regularly and include fixes in upcoming updates.</div>
+            </div>
+
+            <hr>
+
+            <h2>Contact Support</h2>
+            <p>We value your experience and respond to all inquiries individually. Please write to us at our dedicated email address:</p>
+            
+            <div class="contact-box">
+                Email: <a href="mailto:jelaletdinov@gmail.com">jelaletdinov@gmail.com</a><br>
+                Response Time: We aim to reply to all support requests within 24 to 48 hours.
+            </div>
         </div>
+    </main>
 
-        <div class="faq-item">
-            <div class="faq-question">3. Sözleri nädip halanýanlara goşmaly?</div>
-            <div class="faq-answer">Islendik sözüň üstüne basyp, onuň düşündirişini açanyňyzdan soň, sahypanyň ýokarky sag burçundaky ýyldyzjyk (⭐) belgisini basyp, ony halanýan sözleriňiziň sanawyna goşup bilersiňiz.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">4. Ýalňyş ýa-da kemçilik tapsam näme etmeli?</div>
-            <div class="faq-answer">Eger programmada ýalňyş düşündiriş tapsaňyz ýa-be tehniki näsazlyklara duş gelseňiz, aşakdaky e-poçta salgymyz arkaly bize habar bermegiňizi haýyş edýäris.</div>
-        </div>
-
-        <div class="contact-box">
-            <strong>✉️ Habarlaşmak (Contact)</strong><br>
-            Her bir teklibiňiz we soragyňyz biziň üçin örän ähmiýetlidir. Biz bilen e-poçta arkaly habarlaşyp bilersiňiz:<br>
-            E-poçta: <a href="mailto:jelaletdinov@gmail.com">jelaletdinov@gmail.com</a><br>
-            Jogap beriş möhleti: 24-48 sagat içinde.
-        </div>
-
-        <hr>
-
-        <h2>🇬🇧 English Support</h2>
-        <p><strong>Sada Sözlük</strong> is an offline Turkmen explanatory dictionary designed to help users quickly and easily look up word definitions.</p>
-
-        <div class="faq-item">
-            <div class="faq-question">1. Does the app require an internet connection?</div>
-            <div class="faq-answer">No. Sada Sözlük stores all words and definitions locally on your device. You can search and view definitions anytime, anywhere, without an active internet connection.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">2. How can I clear my search history?</div>
-            <div class="faq-answer">On the home page, locate the <strong>"SOŇKY GÖZLEGLER"</strong> (Recent Searches) section. Tap the <strong>"Arassala"</strong> (Clear) button next to the section title to clear your search history.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">3. How do I add words to my favorites?</div>
-            <div class="faq-answer">When viewing the definition of any word, tap the star icon (⭐) in the top-right corner to save it to your Favorites list for quick access.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">4. I found a bug or an incorrect definition. What should I do?</div>
-            <div class="faq-answer">Please let us know by sending an email to our support address. We continuously update our database and app stability based on user reports.</div>
-        </div>
-
-        <div class="contact-box">
-            <strong>✉️ Contact Support</strong><br>
-            For feedback, questions, bug reports, or feature requests, feel free to contact us:<br>
-            Email: <a href="mailto:jelaletdinov@gmail.com">jelaletdinov@gmail.com</a><br>
-            Response Time: We aim to reply to all support requests within 24 to 48 hours.
-        </div>
-
-        <div class="footer">
-            &copy; 2026 Sada Sözlük. Ähli hukuklar goralan.
-        </div>
-    </div>
+    <footer>
+        &copy; 2026 Sada Sozluk. All rights reserved.
+    </footer>
 </body>
 </html>
