@@ -3,242 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sada Sozluk - Features & Marketing</title>
-    <meta name="description" content="Discover the features of Sada Sozluk, the offline Turkmen explanatory dictionary app.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Marketing - Sada Sozluk</title>
+    <meta name="description" content="Features of Sada Sozluk.">
     <style>
         :root {
-            --bg-color: #0b0f19;
-            --card-bg: #151d30;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-color: #3b82f6;
-            --accent-hover: #2563eb;
-            --border-color: #243049;
-            --nav-bg: #111827;
-            --divider-color: #243049;
+            --bg: #ffffff;
+            --text: #111111;
+            --link: #0000ee;
+            --border: #eeeeee;
+            --meta: #666666;
         }
-
-        @media (prefers-color-scheme: light) {
+        @media (prefers-color-scheme: dark) {
             :root {
-                --bg-color: #f8fafc;
-                --card-bg: #ffffff;
-                --text-primary: #0f172a;
-                --text-secondary: #475569;
-                --accent-color: #2563eb;
-                --accent-hover: #1d4ed8;
-                --border-color: #e2e8f0;
-                --nav-bg: #f1f5f9;
-                --divider-color: #e2e8f0;
+                --bg: #111111;
+                --text: #eeeeee;
+                --link: #8ab4f8;
+                --border: #333333;
+                --meta: #999999;
             }
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        header {
-            width: 100%;
-            background-color: var(--nav-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        .nav-container {
-            max-width: 1000px;
+            max-width: 650px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 4rem 1.5rem;
         }
-
-        .brand {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: -0.025em;
-        }
-
         nav {
+            margin-bottom: 3rem;
+            font-size: 0.9rem;
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
         }
-
-        nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--accent-color);
-        }
-
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 3rem 1.5rem;
-        }
-
-        .container {
-            max-width: 720px;
-            width: 100%;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 3.5rem 2.5rem;
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
-        }
-
+        nav a { color: var(--meta); text-decoration: none; }
+        nav a:hover { color: var(--text); }
+        nav a.active { color: var(--text); font-weight: 500; }
         h1 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0 0 2rem 0;
         }
-
-        .subtitle {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: var(--divider-color);
-            margin: 2rem 0;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        @media (min-width: 600px) {
-            .feature-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .feature-card {
-            background-color: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1.5rem;
-        }
-
-        .feature-title {
-            font-weight: 600;
+        h2 {
             font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
+            font-weight: 500;
+            margin: 2rem 0 0.5rem 0;
         }
-
-        .feature-desc {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
+        p {
+            margin: 0 0 1rem 0;
         }
-
-        .app-store-btn {
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .store-link {
             display: inline-block;
             margin-top: 2rem;
-            background-color: var(--text-primary);
-            color: var(--bg-color);
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        .app-store-btn:hover {
-            opacity: 0.9;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            border-top: 1px solid var(--border-color);
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="brand">Sada Sozluk</a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="marketing.html" class="active">Marketing</a>
-                <a href="support.html">Support</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="copyright.html">Copyright</a>
-            </nav>
-        </div>
-    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="marketing.html" class="active">Marketing</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="copyright.html">Copyright</a>
+    </nav>
 
-    <main>
-        <div class="container">
-            <h1>Sada Sozluk</h1>
-            <p class="subtitle">Your Comprehensive Offline Turkmen Dictionary</p>
+    <h1>Sada Sozluk</h1>
+    <p>Sada Sozluk is designed to provide quick, reliable, and accessible word definitions anytime, anywhere. Built with a focus on speed and user experience, it serves as the perfect companion for students, professionals, and language enthusiasts.</p>
 
-            <p>Sada Sozluk is designed to provide quick, reliable, and accessible word definitions anytime, anywhere. Built with a focus on speed and user experience, it serves as the perfect companion for students, professionals, and language enthusiasts.</p>
+    <h2>100% Offline Access</h2>
+    <p>The entire dictionary database is stored locally on your device. Search for words instantly without needing a network connection.</p>
 
-            <hr>
+    <h2>Vocabulary Building</h2>
+    <p>Enhance your learning with built-in flashcards, review lists, and interactive quizzes designed to help you master new words.</p>
 
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-title">100% Offline Access</div>
-                    <div class="feature-desc">The entire dictionary database is stored locally on your device. Search for words instantly without needing a Wi-Fi or cellular connection.</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-title">Vocabulary Building</div>
-                    <div class="feature-desc">Enhance your learning with built-in flashcards, review lists, and interactive quizzes designed to help you master new words.</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-title">Favorites & History</div>
-                    <div class="feature-desc">Easily bookmark words you want to remember and quickly access your recent search history for seamless studying.</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-title">Modern & Fast</div>
-                    <div class="feature-desc">Enjoy a clean, intuitive interface that automatically adapts to your device's dark or light mode for comfortable reading.</div>
-                </div>
-            </div>
+    <h2>Favorites & History</h2>
+    <p>Easily bookmark words you want to remember and quickly access your recent search history for seamless studying.</p>
 
-            <div style="text-align: center;">
-                <a href="#" class="app-store-btn">Download on the App Store</a>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        &copy; 2026 Sada Sozluk. All rights reserved.
-    </footer>
+    <a href="#" class="store-link">Download on the App Store &rarr;</a>
 </body>
 </html>

@@ -3,216 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copyright & Legal - Sada Sozluk</title>
-    <meta name="description" content="Copyright and legal information for the Sada Sozluk application.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Copyright - Sada Sozluk</title>
+    <meta name="description" content="Copyright information for Sada Sozluk.">
     <style>
         :root {
-            --bg-color: #0b0f19;
-            --card-bg: #151d30;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-color: #3b82f6;
-            --accent-hover: #2563eb;
-            --border-color: #243049;
-            --nav-bg: #111827;
-            --divider-color: #243049;
+            --bg: #ffffff;
+            --text: #111111;
+            --link: #0000ee;
+            --border: #eeeeee;
+            --meta: #666666;
         }
-
-        @media (prefers-color-scheme: light) {
+        @media (prefers-color-scheme: dark) {
             :root {
-                --bg-color: #f8fafc;
-                --card-bg: #ffffff;
-                --text-primary: #0f172a;
-                --text-secondary: #475569;
-                --accent-color: #2563eb;
-                --accent-hover: #1d4ed8;
-                --border-color: #e2e8f0;
-                --nav-bg: #f1f5f9;
-                --divider-color: #e2e8f0;
+                --bg: #111111;
+                --text: #eeeeee;
+                --link: #8ab4f8;
+                --border: #333333;
+                --meta: #999999;
             }
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        header {
-            width: 100%;
-            background-color: var(--nav-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        .nav-container {
-            max-width: 1000px;
+            max-width: 650px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 4rem 1.5rem;
         }
-
-        .brand {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: -0.025em;
-        }
-
         nav {
+            margin-bottom: 3rem;
+            font-size: 0.9rem;
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
         }
-
-        nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--accent-color);
-        }
-
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 3rem 1.5rem;
-        }
-
-        .container {
-            max-width: 720px;
-            width: 100%;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 3.5rem 2.5rem;
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
-        }
-
+        nav a { color: var(--meta); text-decoration: none; }
+        nav a:hover { color: var(--text); }
+        nav a.active { color: var(--text); font-weight: 500; }
         h1 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0 0 0.5rem 0;
         }
-
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--text-secondary);
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: var(--divider-color);
-            margin: 2.5rem 0;
-        }
-
         h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 2rem 0 0.5rem 0;
         }
-
+        p, ul {
+            margin: 0 0 1rem 0;
+        }
         ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-secondary);
+            padding-left: 1.5rem;
         }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
         a {
-            color: var(--accent-color);
+            color: var(--link);
             text-decoration: none;
         }
-
         a:hover {
             text-decoration: underline;
         }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            border-top: 1px solid var(--border-color);
+        .meta {
+            color: var(--meta);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="brand">Sada Sozluk</a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="marketing.html">Marketing</a>
-                <a href="support.html">Support</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="copyright.html" class="active">Copyright</a>
-            </nav>
-        </div>
-    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="copyright.html" class="active">Copyright</a>
+    </nav>
 
-    <main>
-        <div class="container">
-            <h1>Copyright & Legal</h1>
-            <p>Last updated: May 29, 2026</p>
+    <h1>Copyright & Legal</h1>
+    <p class="meta">Last updated: May 29, 2026</p>
 
-            <hr>
+    <h2>Intellectual Property</h2>
+    <p>The Sada Sozluk application, including but not limited to its design, user interface, software code, and logo, is the exclusive property of Sada Sozluk developers and is protected by international copyright laws.</p>
 
-            <h2>Intellectual Property</h2>
-            <p>The Sada Sozluk application, including but not limited to its design, user interface, software code, and logo, is the exclusive property of Sada Sozluk developers and is protected by international copyright laws.</p>
+    <h2>Dictionary Database</h2>
+    <p>The Turkmen explanatory dictionary database used within this application is intended for educational and personal use. All rights to the original lexical content, definitions, and linguistic data belong to their respective original authors and linguistic institutes. Sada Sozluk acts as a digital distribution platform to make this knowledge accessible.</p>
 
-            <h2>Dictionary Database</h2>
-            <p>The Turkmen explanatory dictionary database used within this application is intended for educational and personal use. All rights to the original lexical content, definitions, and linguistic data belong to their respective original authors and linguistic institutes. Sada Sozluk acts as a digital distribution platform to make this knowledge accessible.</p>
+    <h2>Usage Restrictions</h2>
+    <p>Users may not:</p>
+    <ul>
+        <li>Decompile, reverse engineer, or disassemble the application.</li>
+        <li>Extract, copy, or redistribute the internal dictionary database for commercial purposes.</li>
+        <li>Use the Sada Sozluk branding, logos, or design assets without prior written permission.</li>
+    </ul>
 
-            <h2>Usage Restrictions</h2>
-            <p>Users may not:</p>
-            <ul>
-                <li>Decompile, reverse engineer, or disassemble the application.</li>
-                <li>Extract, copy, or redistribute the internal dictionary database for commercial purposes.</li>
-                <li>Use the Sada Sozluk branding, logos, or design assets without prior written permission.</li>
-            </ul>
+    <h2>Disclaimer</h2>
+    <p>While we strive to ensure the accuracy of the dictionary entries, Sada Sozluk provides the data "as is" without any warranties. We are not responsible for any errors or inaccuracies in the word definitions.</p>
 
-            <h2>Disclaimer</h2>
-            <p>While we strive to ensure the accuracy of the dictionary entries, Sada Sozluk provides the data "as is" without any warranties. We are not responsible for any errors or inaccuracies in the word definitions.</p>
-
-            <h2>Contact</h2>
-            <p>For any copyright-related inquiries or intellectual property concerns, please contact us at: <a href="mailto:jelaletdinov@gmail.com">jelaletdinov@gmail.com</a>.</p>
-        </div>
-    </main>
-
-    <footer>
-        &copy; 2026 Sada Sozluk. All rights reserved.
-    </footer>
+    <h2>Contact</h2>
+    <p>For any copyright-related inquiries or intellectual property concerns, please contact us at <a href="mailto:jelaletdinov@gmail.com">jelaletdinov@gmail.com</a>.</p>
 </body>
 </html>

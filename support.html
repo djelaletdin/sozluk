@@ -4,240 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support - Sada Sozluk</title>
-    <meta name="description" content="Support and help page for the Sada Sozluk app.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Support for Sada Sozluk.">
     <style>
         :root {
-            --bg-color: #0b0f19;
-            --card-bg: #151d30;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-color: #3b82f6;
-            --accent-hover: #2563eb;
-            --border-color: #243049;
-            --nav-bg: #111827;
-            --divider-color: #243049;
+            --bg: #ffffff;
+            --text: #111111;
+            --link: #0000ee;
+            --border: #eeeeee;
+            --meta: #666666;
         }
-
-        @media (prefers-color-scheme: light) {
+        @media (prefers-color-scheme: dark) {
             :root {
-                --bg-color: #f8fafc;
-                --card-bg: #ffffff;
-                --text-primary: #0f172a;
-                --text-secondary: #475569;
-                --accent-color: #2563eb;
-                --accent-hover: #1d4ed8;
-                --border-color: #e2e8f0;
-                --nav-bg: #f1f5f9;
-                --divider-color: #e2e8f0;
+                --bg: #111111;
+                --text: #eeeeee;
+                --link: #8ab4f8;
+                --border: #333333;
+                --meta: #999999;
             }
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        header {
-            width: 100%;
-            background-color: var(--nav-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        .nav-container {
-            max-width: 1000px;
+            max-width: 650px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 4rem 1.5rem;
         }
-
-        .brand {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: -0.025em;
-        }
-
         nav {
+            margin-bottom: 3rem;
+            font-size: 0.9rem;
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
         }
-
-        nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--accent-color);
-        }
-
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 3rem 1.5rem;
-        }
-
-        .container {
-            max-width: 720px;
-            width: 100%;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 3.5rem 2.5rem;
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
-        }
-
+        nav a { color: var(--meta); text-decoration: none; }
+        nav a:hover { color: var(--text); }
+        nav a.active { color: var(--text); font-weight: 500; }
         h1 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--text-secondary);
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: var(--divider-color);
-            margin: 2.5rem 0;
-        }
-
-        h2 {
             font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
+            font-weight: 500;
+            margin: 0 0 2rem 0;
         }
-
-        .faq-item {
-            margin-bottom: 1.75rem;
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 2rem 0 0.5rem 0;
         }
-
-        .faq-question {
-            font-weight: 600;
-            font-size: 1.05rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
+        p {
+            margin: 0 0 1rem 0;
         }
-
-        .faq-answer {
-            color: var(--text-secondary);
-        }
-
-        .contact-box {
-            background-color: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .contact-box a {
-            color: var(--accent-color);
+        a {
+            color: var(--link);
             text-decoration: none;
-            font-weight: 600;
         }
-
-        .contact-box a:hover {
+        a:hover {
             text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            border-top: 1px solid var(--border-color);
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="brand">Sada Sozluk</a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="marketing.html">Marketing</a>
-                <a href="support.html" class="active">Support</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="copyright.html">Copyright</a>
-            </nav>
-        </div>
-    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="support.html" class="active">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="copyright.html">Copyright</a>
+    </nav>
 
-    <main>
-        <div class="container">
-            <h1>Support & Help</h1>
-            <p>Welcome to the support page for Sada Sozluk. If you have questions, feedback, or need help with the application, you can find common answers below or get in touch with us directly.</p>
+    <h1>Support</h1>
+    <p>Welcome to the support page for Sada Sozluk. If you have questions, feedback, or need help with the application, you can find common answers below or get in touch with us directly.</p>
 
-            <hr>
+    <h2>Does the application require an internet connection?</h2>
+    <p>No. Sada Sozluk stores the dictionary database locally on your device. You can search for word definitions and access all features without an active network connection.</p>
 
-            <h2>Frequently Asked Questions</h2>
+    <h2>How can I clear my search history?</h2>
+    <p>On the home screen, find the recent searches section. Tap the clear option located next to the section header to remove all items from your search history.</p>
 
-            <div class="faq-item">
-                <div class="faq-question">Does the application require an internet connection?</div>
-                <div class="faq-answer">No. Sada Sozluk stores the dictionary database locally on your device. You can search for word definitions and access all features without an active network connection.</div>
-            </div>
+    <h2>How do I add words to my favorites?</h2>
+    <p>While viewing the detailed definition page of any word, tap the star icon at the top right of the screen. This saves the word to your favorites list for quick offline retrieval.</p>
 
-            <div class="faq-item">
-                <div class="faq-question">How can I clear my search history?</div>
-                <div class="faq-answer">On the home screen, find the recent searches section. Tap the clear option located next to the section header to remove all items from your search history.</div>
-            </div>
+    <h2>What should I do if I find an incorrect definition or face a bug?</h2>
+    <p>Please contact us via the support email address below. We verify database corrections and application issues regularly and include fixes in upcoming updates.</p>
 
-            <div class="faq-item">
-                <div class="faq-question">How do I add words to my favorites?</div>
-                <div class="faq-answer">While viewing the detailed definition page of any word, tap the star icon at the top right of the screen. This saves the word to your favorites list for quick offline retrieval.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What should I do if I find an incorrect definition or face a bug?</div>
-                <div class="faq-answer">Please contact us via the support email address below. We verify database corrections and application issues regularly and include fixes in upcoming updates.</div>
-            </div>
-
-            <hr>
-
-            <h2>Contact Support</h2>
-            <p>We value your experience and respond to all inquiries individually. Please write to us at our dedicated email address:</p>
-            
-            <div class="contact-box">
-                Email: <a href="mailto:jelaletdinov@gmail.com">jelaletdinov@gmail.com</a><br>
-                Response Time: We aim to reply to all support requests within 24 to 48 hours.
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        &copy; 2026 Sada Sozluk. All rights reserved.
-    </footer>
+    <h2>Contact</h2>
+    <p>We value your experience and respond to all inquiries individually. Please write to us at <a href="mailto:jelaletdinov@gmail.com">jelaletdinov@gmail.com</a>.</p>
 </body>
 </html>
